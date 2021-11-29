@@ -2,13 +2,15 @@
 //LCM=(A*B)/GCD
 public class Solution {
     public int LCM(int A, int B) {
-        int gcd=0;
+        int gcd=1;
         int f;
         if(A<=B){
             f=A;
         }else{
             f=B;
         }
+
+        if(f>1){
         for(int i=2;i<=f;i++){
             if(A%i==0 && B%i==0){
                // System.out.println(i);
@@ -18,5 +20,9 @@ public class Solution {
         }
         int lcm=(A*B)/gcd;
         return lcm;
+        } else{
+            return 1;
+        }
+
     }
 }
