@@ -21,6 +21,21 @@ public class sp_02 {
 		
 }
 
+***********************or*******************************
+public class Solution {
+    public int solve(int A) {
+        //base condition
+        if(A==1){
+            return 1;
+        }else{
+            //execution
+            int res=solve(A-1)*A;
+            return res;
+        }
+    }
+}
+
+
 
 
 
